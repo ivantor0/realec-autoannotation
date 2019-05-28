@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang = "en">
+	<script src="./static/engine.js"></script>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="./static/layout.css">
+		<title>REALEC AutoAnnotator Results Preview</title>
+	</head>
+	<body onload="fadein(document.body,500); updateText();">
+		<div id="h1">REALEC AutoAnnotator Results Preview</div>
+		<form name="mainform">
+			<div class="txt" style="width: 80%; margin: auto; text-align: center; font-size: 13pt;">Error type is <b>Choice of lexical item</b> 
+			</div>
+			</div>
+			<div class="txt" style="width: 80%; margin: auto; text-align: center; font-size: 13pt;">Select text: 
+				<select name="reservetext" onChange="javascript:updateText();" style="display: inline-block;">
+					<option value="esl_00382">esl_00382</option>
+					<option value="2_2" selected>2_2</option>
+					<option value="esl_01177">esl_01177</option>
+					<option value="EKu_12_2">EKu_12_2</option>
+					<option value="VSa_35_1">VSa_35_1</option>
+					<option value="OBy_69_2">OBy_69_2</option>
+					<option value="AAl_9_2">AAl_9_2</option>
+					<option value="EEm_36_1">EEm_36_1</option>
+					<option value="st_45_7">st_45_7</option>
+					<option value="OR_127_1">OR_127_1</option>
+					<option value="NMya_14_1">NMya_14_1</option>
+					<option value="esl_00437">esl_00437</option>
+					<option value="JSl_124_1">JSl_124_1</option>
+					<option value="AKhr_31_2">AKhr_31_2</option>
+					<option value="esl_00583">esl_00583</option>
+				</select>
+			</div>
+			<div id="models" style="text-align: center;">
+				<div class="txt nulla" id="checkme" style="margin-left: 5px; margin-right: 5px;"><input type="radio" name="model" value="nulla" checked>Human annotator</div>
+				<div class="bot duo" style="margin-left: 5px; margin-right: 5px;"><input type="radio" name="model" value="duo">Uncased</div>
+				<div class="bot tres" style="margin-left: 5px; margin-right: 5px;"><input type="radio" name="model" value="tres">Cased</div>
+				<div class="bot quattuor" style="margin-left: 5px; margin-right: 5px;"><input type="radio" name="model" value="quattuor">N-gram</div>
+				<div class="bot quinque" style="margin-left: 5px; margin-right: 5px;"><input type="radio" name="model" value="quinque">Combined</div>
+			</div>
+		</form>
+		<br>
+		<div class="txt" id="hiddenplacer" style="position: relative; width: 98%; margin: auto; text-align: center; z-index: 0; visibility: hidden;">
+			<div id="sneaker"></div>
+			<div class="txt" id="textplacer" style="position: absolute; width: 100%; top: 0px; left: 0px; text-align: center; visibility: hidden; z-index: 0;"></div>
+			<div class="txt" id="nulla" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+			<div class="txt" id="unus" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+			<div class="txt" id="duo" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+			<div class="txt" id="tres" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+			<div class="txt" id="quattuor" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+			<div class="txt" id="quinque" name="textmask" style="position: absolute; width: 100%; top: 0px; left: 0px; font-size: 11pt; text-align: center; color: #222222; visibility: hidden;"></div>
+		</div>
+	</body>
+</html>
