@@ -398,13 +398,13 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     if request.args:
-        text_to_inspect = request.form['text_to_inspect']
+        text_to_inspect = request.args['text_to_inspect']
         return render_template("result.html", annotation = annotate(text_to_inspect))
     return render_template("main.html")
 
 @app.route('/examples')
 def examples():
-    return render_template("index.html")
+    return render_template("examples.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=80)
